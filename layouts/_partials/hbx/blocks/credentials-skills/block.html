@@ -1,0 +1,18 @@
+{{/* Custom block: verified skills from data/credentials.yaml, shown as simple tags. */}}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+{{ $skills := (hugo.Data.credentials | default dict).skills | default slice }}
+
+<div class="flex flex-col items-center max-w-4xl mx-auto gap-3 justify-center px-6 md:px-0">
+  {{ with $content.title }}
+  <div class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">{{ . | markdownify | emojify }}</div>
+  {{ end }}
+  {{ with $content.text }}<p class="mb-6 text-center text-gray-600 dark:text-gray-400">{{ . | markdownify | emojify }}</p>{{ end }}
+
+  <ul class="flex flex-wrap justify-center gap-2">
+    {{ range $skills }}
+    <li class="rounded-md border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.04] px-3 py-1 text-sm text-gray-800 dark:text-gray-200">{{ . }}</li>
+    {{ end }}
+  </ul>
+</div>

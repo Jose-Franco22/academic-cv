@@ -1,0 +1,41 @@
+{{/* Custom block: grid of badges from data/credentials.yaml (Credly, Credential.net), each linked to its verified credential. */}}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+{{ $data := hugo.Data.credentials | default dict }}
+{{ $badges := $data.badges | default slice }}
+
+<div class="flex flex-col items-center max-w-4xl mx-auto gap-3 justify-center px-6 md:px-0">
+  {{ with $content.title }}
+  <div class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">{{ . | markdownify | emojify }}</div>
+  {{ end }}
+  {{ with $content.text }}<p class="mb-6 text-center text-gray-600 dark:text-gray-400">{{ . | markdownify | emojify }}</p>{{ end }}
+
+  <ul class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-10">
+    {{ range sort $badges "date" "desc" }}
+    {{ $badge := . }}
+    {{ with resources.Get (printf "media/badges/%s" $badge.image) }}
+    {{ $img := .Process "Resize 256x webp" }}
+    <li>
+      <a href="{{ $badge.url | safeURL }}" target="_blank" rel="noopener" class="group flex flex-col items-center text-center">
+        <img src="{{ $img.RelPermalink }}" width="128" height="128" alt="{{ $badge.name }} badge" loading="lazy" decoding="async"
+             class="w-28 h-28 sm:w-32 sm:h-32 object-contain transition-transform duration-300 group-hover:-translate-y-1" />
+        <span class="mt-3 text-sm font-semibold leading-snug text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400">{{ $badge.name }}</span>
+        <span class="mt-1 text-xs text-gray-500 dark:text-gray-400">{{ with $badge.issuer }}{{ . }} &middot; {{ end }}{{ time.Format "Jan 2006" $badge.date }}</span>
+      </a>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+
+  {{ with $data.profiles }}
+  <div class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3">
+    {{ range . }}
+    <a href="{{ .url | safeURL }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 font-medium hover:underline">
+      View all on {{ .name }}
+      {{ partial "functions/get_icon" (dict "name" "hero/arrow-top-right-on-square" "attributes" "class='w-4 h-4' aria-hidden='true'") }}
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

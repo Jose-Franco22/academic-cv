@@ -11,9 +11,9 @@ name:
 postnominals: []
 role: Data Analyst
 bio: |
-  Jose Franco is a data analyst at University Lands, where he builds SQL,
-  SSRS, and Power BI reporting on oil and gas well and production data for
-  accounting and operations teams. He is finishing a B.S. in Computer Science
+  Jose Franco is a Data Analyst at University Lands, where he builds SQL,
+  SSRS, and Power BI reporting on oil and gas well and production data.
+  He is finishing a B.S. in Computer Science
   at the University of Texas Rio Grande Valley.
 
 affiliations:
@@ -37,6 +37,7 @@ interests:
 education:
   - degree: B.S. Computer Science
     institution: University of Texas Rio Grande Valley
+    logo: utrgv.png
     year: 'Aug 2023 – Dec 2026 (expected)'
     start: 2023-08-01
     end: 2026-12-31
@@ -46,6 +47,7 @@ education:
 experience:
   - role: Data Analyst
     org: University Lands
+    logo: university-lands.png
     start: 2026-08-01
     summary: |
       - Build and maintain SSRS reports and Power BI dashboards tracking well performance and oil and gas production data for operations and accounting teams.
@@ -58,6 +60,7 @@ experience:
       icon: hero/arrow-down-tray
   - role: Data Analyst Intern
     org: University Lands
+    logo: university-lands.png
     start: 2026-06-01
     end: 2026-08-31
     summary: |
@@ -67,12 +70,14 @@ experience:
       - Built a keyword-based error classifier that condensed long SSIS error logs into two-word categories, cutting diagnosis time from about 10 minutes to a few seconds.
   - role: Quality Assurance Analyst Intern
     org: Kemper
+    logo: kemper.png
     start: 2026-02-01
     end: 2026-04-30
     summary: |
       - Built a Power BI dashboard logging application activity for about 10,000 users, flagging roughly 15 anomalies such as after-hours logins.
   - role: IT Support Technician
     org: Rio Bank
+    logo: rio-bank.png
     start: 2025-09-01
     end: 2026-02-28
     summary: |
@@ -80,6 +85,7 @@ experience:
       - Monitored system access logs to keep user permissions aligned with security standards.
   - role: Research Assistant
     org: Machine Intelligence Lab, UTRGV
+    logo: utrgv.png
     start: 2024-11-01
     end: 2026-08-31
     summary: |
@@ -87,6 +93,7 @@ experience:
       - Ran ad-hoc data analysis in Python to refine model parameters.
   - role: Tutor
     org: The Learning Center at UTRGV
+    logo: utrgv.png
     start: 2024-09-01
     end: 2024-11-30
     summary: |
@@ -94,6 +101,7 @@ experience:
       - Mentored classmates in debugging and algorithmic problem-solving, increasing group project efficiency and peer engagement by 25%.
   - role: Data Science Intern
     org: Elsa Economic Development Corp.
+    logo: elsa-edc.png
     start: 2024-09-01
     end: 2024-11-30
     summary: |
@@ -102,28 +110,50 @@ experience:
 
 skills:
   - name: Languages
+    description: What I query, model, and script with.
     items:
       - label: SQL (T-SQL)
+        icon: devicon/microsoftsqlserver
       - label: Python (pandas, NumPy)
+        icon: devicon/python
       - label: DAX
+        icon: custom/powerbi
       - label: C++
+        icon: devicon/cplusplus
   - name: Reporting & BI
+    description: Where the numbers reach the people who use them.
     items:
       - label: Power BI (Desktop, Service, Gateways)
+        icon: custom/powerbi
       - label: Power Query
+        icon: custom/powerbi
       - label: SSRS
+        icon: devicon/microsoftsqlserver
       - label: Tableau
+        icon: custom/tableau
       - label: Excel
+        icon: custom/excel
   - name: Data Engineering & Tools
+    description: What keeps data moving, scheduled, and versioned.
     items:
       - label: SSIS
+        icon: devicon/microsoftsqlserver
       - label: SQL Server Agent
+        icon: devicon/microsoftsqlserver
       - label: SSMS
+        icon: devicon/microsoftsqlserver
       - label: Azure DevOps
+        icon: devicon/azuredevops
       - label: Git
+        icon: devicon/git
       - label: Jupyter
-      - label: Plotly & Seaborn
+        icon: devicon/jupyter
+      - label: Plotly
+        icon: devicon/plotly
+      - label: Seaborn
+        icon: devicon/seaborn
       - label: Linux
+        icon: devicon/linux
 
 languages:
   - name: English
@@ -136,9 +166,25 @@ languages:
 awards:
   - title: IBM Data Science Professional Certificate
     awarder: IBM (Coursera)
-    date: "2025"
-    icon: hero/academic-cap
-  - title: IBM Data Analyst Professional Certificate
-    awarder: IBM (Coursera)
-    date: "2025"
-    icon: hero/academic-cap
+    date: 2025-07-22
+    badge: ibm-data-science.png
+    certificate_url: https://www.credly.com/badges/5e80beff-1b1a-4e27-96fb-c8b249561024
+    featured: true
+  - title: "UTRGV Coding for Data Track"
+    awarder: Global Career Accelerator
+    date: 2024-08-21
+    badge: gca-coding-for-data-track.png
+    certificate_url: https://www.credential.net/24bc5d73-038f-4ef7-b29e-afdf2d2b8eb5
+    featured: true
+  - title: "Intel Project: Data Analysis for Sustainability"
+    awarder: Global Career Accelerator
+    date: 2024-08-20
+    badge: gca-intel-sustainability.png
+    certificate_url: https://www.credential.net/70c06f22-64c1-4694-bcb4-2ff9ce7dde34
+    featured: true
+  - title: "GRAMMYs Project: Website Audience Analysis"
+    awarder: Global Career Accelerator
+    date: 2024-08-19
+    badge: gca-grammys-audience-analysis.png
+    certificate_url: https://www.credential.net/8156ede7-dcc7-49e1-a57c-7ebcc27c035a
+    featured: true
