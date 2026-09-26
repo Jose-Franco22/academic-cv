@@ -2,115 +2,143 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
-postnominals:
-  - PhD
-  - MIEEE
-status:
-  icon: "☕️"
-role: Senior AI Research Scientist
+  display: Jose Franco
+  given: Jose
+  family: Franco
+  alternate: ''
+  pronunciation: ''
+  pronouns: ''
+postnominals: []
+role: Data Analyst
 bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Jose Franco is a data analyst at University Lands, where he builds SQL,
+  SSRS, and Power BI reporting on oil and gas well and production data for
+  accounting and operations teams. He is finishing a B.S. in Computer Science
+  at the University of Texas Rio Grande Valley.
 
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: University Lands
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
+    url: mailto:jose2005rfranco@gmail.com
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
-  - icon: brands/github
-    url: https://github.com/example
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://www.linkedin.com/in/jose-franco022
+  - icon: brands/github
+    url: https://github.com/Jose-Franco22
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Business Intelligence & Reporting
+  - Data Engineering (SQL Server, SSIS)
+  - Data Quality & Reconciliation
+  - Query Performance Optimization
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: B.S. Computer Science
+    institution: University of Texas Rio Grande Valley
+    year: 'Aug 2023 – Dec 2026 (expected)'
+    start: 2023-08-01
+    end: 2026-12-31
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+      3.82 GPA. Expected graduation December 2026.
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Data Analyst
+    org: University Lands
+    start: 2026-08-01
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
+      - Build and maintain SSRS reports and Power BI dashboards tracking well performance and oil and gas production data for operations and accounting teams.
+      - Partnered with accounting to build a Power BI dashboard tracking operator payment variances, identifying about 1,000 discrepancies from a single operator over the past year and recovering roughly $5,000.
+      - Developed the company's first cross-application reconciliation report comparing property numbers across 30,000 wells in the accounting and land administration systems, identifying 18,000 unmatched records with 100% accuracy.
+      - Leading query optimization for accounting's Power BI dashboards to resolve memory errors during refresh.
     button:
-      text: View portfolio
-      url: /
+      text: Download resume
+      url: uploads/resume.pdf
       icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
+  - role: Data Analyst Intern
+    org: University Lands
+    start: 2026-06-01
+    end: 2026-08-31
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      - Built an SSRS governance dashboard tracking usage, run times, errors, subscriptions, datasets, and data sources across 500 reports, revealing that 80% (about 400) were unused.
+      - Designed a custom Complexity Score based on datasets, data sources, and query length to rank the ~100 active reports by migration effort.
+      - Developed an SSIS monitoring dashboard for 200 packages tracking success and failure, run durations, and job history, with a step-by-step diagnostic of each failure.
+      - Built a keyword-based error classifier that condensed long SSIS error logs into two-word categories, cutting diagnosis time from about 10 minutes to a few seconds.
+  - role: Quality Assurance Analyst Intern
+    org: Kemper
+    start: 2026-02-01
+    end: 2026-04-30
+    summary: |
+      - Built a Power BI dashboard logging application activity for about 10,000 users, flagging roughly 15 anomalies such as after-hours logins.
+  - role: IT Support Technician
+    org: Rio Bank
+    start: 2025-09-01
+    end: 2026-02-28
+    summary: |
+      - Provided first-level support to 100+ users, escalating complex network and software issues.
+      - Monitored system access logs to keep user permissions aligned with security standards.
+  - role: Research Assistant
+    org: Machine Intelligence Lab, UTRGV
+    start: 2024-11-01
+    end: 2026-08-31
+    summary: |
+      - Tracked project milestones and led a team of 3 researchers to keep research timelines on track.
+      - Ran ad-hoc data analysis in Python to refine model parameters.
+  - role: Tutor
+    org: The Learning Center at UTRGV
+    start: 2024-09-01
+    end: 2024-11-30
+    summary: |
+      - Led 20+ study sessions on data structures and algorithms for a cohort of 30+ students, resulting in a 15% average improvement in exam scores.
+      - Mentored classmates in debugging and algorithmic problem-solving, increasing group project efficiency and peer engagement by 25%.
+  - role: Data Science Intern
+    org: Elsa Economic Development Corp.
+    start: 2024-09-01
+    end: 2024-11-30
+    summary: |
+      - Extracted and analyzed regional economic datasets, generating insights that guided city development strategies.
+      - Built and deployed 15+ Tableau dashboards for city leadership.
 
 skills:
-  - name: Technical Skills
+  - name: Languages
     items:
-      - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
+      - label: SQL (T-SQL)
+      - label: Python (pandas, NumPy)
+      - label: DAX
+      - label: C++
+  - name: Reporting & BI
     items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
+      - label: Power BI (Desktop, Service, Gateways)
+      - label: Power Query
+      - label: SSRS
+      - label: Tableau
+      - label: Excel
+  - name: Data Engineering & Tools
+    items:
+      - label: SSIS
+      - label: SQL Server Agent
+      - label: SSMS
+      - label: Azure DevOps
+      - label: Git
+      - label: Jupyter
+      - label: Plotly & Seaborn
+      - label: Linux
 
 languages:
   - name: English
     level: 5
-    label: Native
+    label: Fluent
   - name: Spanish
-    level: 4
+    level: 5
     label: Fluent
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+  - title: IBM Data Science Professional Certificate
+    awarder: IBM (Coursera)
+    date: "2025"
+    icon: hero/academic-cap
+  - title: IBM Data Analyst Professional Certificate
+    awarder: IBM (Coursera)
+    date: "2025"
+    icon: hero/academic-cap
