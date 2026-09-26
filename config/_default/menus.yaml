@@ -11,6 +11,9 @@ main:
   - name: Projects
     url: projects/
     weight: 25
+  - name: Credentials
+    url: credentials/
+    weight: 27
   - name: Resume
     url: uploads/resume.pdf
     weight: 30

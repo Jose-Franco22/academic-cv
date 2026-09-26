@@ -1,0 +1,82 @@
+{{/* Click-to-enlarge for images marked `data-zoomable` (the theme adds the attribute but ships no viewer). */}}
+<style>
+  img[data-zoomable] { cursor: zoom-in; }
+  .img-zoom-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 2rem; background: rgb(0 0 0 / 0.85);
+    cursor: zoom-out; opacity: 0; transition: opacity 0.2s ease;
+  }
+  .img-zoom-overlay.is-open { opacity: 1; }
+  .img-zoom-overlay img {
+    max-width: 100%; max-height: 100%; object-fit: contain;
+    border-radius: 0.75rem; box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+    transform: scale(0.96); transition: transform 0.2s ease;
+  }
+  .img-zoom-overlay.is-open img { transform: scale(1); }
+  .img-zoom-close {
+    position: absolute; top: 1rem; right: 1rem;
+    width: 2.5rem; height: 2.5rem; border-radius: 9999px;
+    background: rgb(255 255 255 / 0.15); color: #fff; font-size: 1.5rem; line-height: 1;
+    cursor: pointer; border: 0;
+  }
+  .img-zoom-close:hover, .img-zoom-close:focus-visible { background: rgb(255 255 255 / 0.3); }
+  @media (prefers-reduced-motion: reduce) {
+    .img-zoom-overlay, .img-zoom-overlay img { transition: none; }
+  }
+</style>
+<script>
+  (function () {
+    var overlay = null, lastFocus = null;
+
+    function close() {
+      if (!overlay) return;
+      var el = overlay;
+      overlay = null;
+      el.classList.remove('is-open');
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+      setTimeout(function () { el.remove(); }, 200);
+      if (lastFocus) lastFocus.focus();
+    }
+
+    function onKey(e) { if (e.key === 'Escape') close(); }
+
+    function open(img) {
+      lastFocus = img;
+      overlay = document.createElement('div');
+      overlay.className = 'img-zoom-overlay';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('aria-label', img.alt || 'Enlarged image');
+
+      var big = document.createElement('img');
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt;
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'img-zoom-close';
+      btn.setAttribute('aria-label', 'Close');
+      btn.innerHTML = '&times;';
+
+      overlay.appendChild(big);
+      overlay.appendChild(btn);
+      overlay.addEventListener('click', close);
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', onKey);
+      requestAnimationFrame(function () { overlay.classList.add('is-open'); });
+      btn.focus();
+    }
+
+    document.querySelectorAll('img[data-zoomable]').forEach(function (img) {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.addEventListener('click', function () { open(img); });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img); }
+      });
+    });
+  })();
+</script>

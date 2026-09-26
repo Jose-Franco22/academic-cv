@@ -17,12 +17,6 @@ sections:
     content:
       title: Skills
       username: me
-  - block: resume-awards
-    content:
-      title: Certifications
-      username: me
-  - block: resume-languages
-    content:
-      title: Languages
-      username: me
+    design:
+      columns: 1
 ---
