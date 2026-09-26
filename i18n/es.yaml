@@ -1,0 +1,7 @@
+# Etiquetas usadas por las plantillas personalizadas de este sitio (las del tema vienen de sus propios archivos i18n).
+- id: view_all_on
+  translation: "Ver todo en {{ .Name }}"
+- id: made_with
+  translation: "Hecho con"
+- id: enlarged_image
+  translation: "Imagen ampliada"

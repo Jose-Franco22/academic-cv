@@ -1,0 +1,154 @@
+# Spanish version of data/authors/me.yaml.
+# Only fields listed here are replaced on the Spanish site; everything else (name, photo, certificates…)
+# comes from the English file. A list here (e.g. experience) replaces the whole English list, so keep
+# each entry complete, including logos and dates.
+role: Analista de Datos
+bio: |
+  Jose Franco es analista de datos en University Lands, donde desarrolla reportes
+  en SQL, SSRS y Power BI sobre datos de pozos y producción de petróleo y gas.
+  Está terminando su licenciatura en Ciencias de la Computación
+  en la University of Texas Rio Grande Valley.
+
+links:
+  - icon: at-symbol
+    url: mailto:jose2005rfranco@gmail.com
+    label: Envíame un correo
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/jose-franco022
+  - icon: brands/github
+    url: https://github.com/Jose-Franco22
+
+interests:
+  - Inteligencia de negocios y reportes
+  - Ingeniería de datos (SQL Server, SSIS)
+  - Calidad y conciliación de datos
+  - Optimización del rendimiento de consultas
+
+education:
+  - degree: Licenciatura en Ciencias de la Computación
+    institution: University of Texas Rio Grande Valley
+    logo: utrgv.png
+    year: 'ago. 2023 – dic. 2026 (prevista)'
+    start: 2023-08-01
+    end: 2026-12-31
+    summary: |
+      Promedio de 3.82. Graduación prevista en diciembre de 2026.
+
+experience:
+  - role: Analista de Datos
+    org: University Lands
+    logo: university-lands.png
+    start: 2026-08-01
+    summary: |
+      - Desarrollo y mantengo reportes de SSRS y dashboards de Power BI que dan seguimiento al rendimiento de los pozos y a la producción de petróleo y gas para los equipos de operaciones y contabilidad.
+      - Colaboré con contabilidad para crear un dashboard de Power BI que da seguimiento a las variaciones en los pagos de operadores, identificando cerca de 1,000 discrepancias de un solo operador durante el último año y recuperando aproximadamente $5,000.
+      - Desarrollé el primer reporte de conciliación entre aplicaciones de la empresa, comparando los números de propiedad de 30,000 pozos en los sistemas de contabilidad y de administración de tierras, e identificando 18,000 registros sin coincidencia con 100% de precisión.
+      - Dirijo la optimización de consultas de los dashboards de Power BI de contabilidad para resolver errores de memoria durante la actualización.
+    button:
+      text: Descargar currículum
+      url: uploads/resume.pdf
+      icon: hero/arrow-down-tray
+  - role: Pasante de Analista de Datos
+    org: University Lands
+    logo: university-lands.png
+    start: 2026-06-01
+    end: 2026-08-31
+    summary: |
+      - Creé un dashboard de gobernanza de SSRS que da seguimiento al uso, tiempos de ejecución, errores, suscripciones, conjuntos de datos y fuentes de datos de 500 reportes, revelando que el 80% (unos 400) no se usaban.
+      - Diseñé un Puntaje de Complejidad personalizado, basado en conjuntos de datos, fuentes de datos y longitud de las consultas, para clasificar los ~100 reportes activos según el esfuerzo de migración.
+      - Desarrollé un dashboard de monitoreo de SSIS para 200 paquetes que registra éxitos y fallas, duración de ejecuciones e historial de trabajos, con un diagnóstico paso a paso de cada falla.
+      - Creé un clasificador de errores basado en palabras clave que resumió registros de error largos de SSIS en categorías de dos palabras, reduciendo el tiempo de diagnóstico de unos 10 minutos a unos pocos segundos.
+  - role: Pasante de Aseguramiento de Calidad
+    org: Kemper
+    logo: kemper.png
+    start: 2026-02-01
+    end: 2026-04-30
+    summary: |
+      - Creé un dashboard de Power BI que registra la actividad de la aplicación de unos 10,000 usuarios, detectando aproximadamente 15 anomalías, como inicios de sesión fuera del horario laboral.
+  - role: Técnico de Soporte de TI
+    org: Rio Bank
+    logo: rio-bank.png
+    start: 2025-09-01
+    end: 2026-02-28
+    summary: |
+      - Brindé soporte de primer nivel a más de 100 usuarios, escalando problemas complejos de red y de software.
+      - Monitoreé los registros de acceso al sistema para mantener los permisos de los usuarios alineados con los estándares de seguridad.
+  - role: Asistente de Investigación
+    org: Machine Intelligence Lab, UTRGV
+    logo: utrgv.png
+    start: 2024-11-01
+    end: 2026-08-31
+    summary: |
+      - Di seguimiento a los hitos del proyecto y dirigí un equipo de 3 investigadores para cumplir con los plazos de investigación.
+      - Realicé análisis de datos puntuales en Python para ajustar los parámetros de los modelos.
+  - role: Tutor
+    org: The Learning Center at UTRGV
+    logo: utrgv.png
+    start: 2024-09-01
+    end: 2024-11-30
+    summary: |
+      - Dirigí más de 20 sesiones de estudio sobre estructuras de datos y algoritmos para un grupo de más de 30 estudiantes, logrando una mejora promedio del 15% en las calificaciones de los exámenes.
+      - Asesoré a compañeros en depuración de código y resolución de problemas algorítmicos, aumentando en un 25% la eficiencia de los proyectos en grupo y la participación entre compañeros.
+  - role: Pasante de Ciencia de Datos
+    org: Elsa Economic Development Corp.
+    logo: elsa-edc.png
+    start: 2024-09-01
+    end: 2024-11-30
+    summary: |
+      - Extraje y analicé conjuntos de datos económicos regionales, generando información que orientó las estrategias de desarrollo de la ciudad.
+      - Creé y publiqué más de 15 dashboards de Tableau para los líderes de la ciudad.
+
+skills:
+  - name: Lenguajes
+    description: Con lo que consulto, modelo y programo.
+    items:
+      - label: SQL (T-SQL)
+        icon: devicon/microsoftsqlserver
+      - label: Python (pandas, NumPy)
+        icon: devicon/python
+      - label: DAX
+        icon: custom/powerbi
+      - label: C++
+        icon: devicon/cplusplus
+  - name: Reportes y BI
+    description: Donde los números llegan a las personas que los usan.
+    items:
+      - label: Power BI (Desktop, Service, Gateways)
+        icon: custom/powerbi
+      - label: Power Query
+        icon: custom/powerbi
+      - label: SSRS
+        icon: devicon/microsoftsqlserver
+      - label: Tableau
+        icon: custom/tableau
+      - label: Excel
+        icon: custom/excel
+  - name: Ingeniería de datos y herramientas
+    description: Lo que mantiene los datos en movimiento, programados y versionados.
+    items:
+      - label: SSIS
+        icon: devicon/microsoftsqlserver
+      - label: SQL Server Agent
+        icon: devicon/microsoftsqlserver
+      - label: SSMS
+        icon: devicon/microsoftsqlserver
+      - label: Azure DevOps
+        icon: devicon/azuredevops
+      - label: Git
+        icon: devicon/git
+      - label: Jupyter
+        icon: devicon/jupyter
+      - label: Plotly
+        icon: devicon/plotly
+      - label: Seaborn
+        icon: devicon/seaborn
+      - label: Linux
+        icon: devicon/linux
+
+languages:
+  - name: Inglés
+    level: 5
+    label: Fluido
+  - name: Español
+    level: 5
+    label: Fluido

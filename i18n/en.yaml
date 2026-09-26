@@ -1,0 +1,7 @@
+# Labels used by this site's custom templates (the theme's own labels come from its i18n files).
+- id: view_all_on
+  translation: "View all on {{ .Name }}"
+- id: made_with
+  translation: "Made with"
+- id: enlarged_image
+  translation: "Enlarged image"

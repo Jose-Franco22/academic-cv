@@ -48,7 +48,7 @@
       overlay.className = 'img-zoom-overlay';
       overlay.setAttribute('role', 'dialog');
       overlay.setAttribute('aria-modal', 'true');
-      overlay.setAttribute('aria-label', img.alt || 'Enlarged image');
+      overlay.setAttribute('aria-label', img.alt || {{ i18n "enlarged_image" | jsonify | safeJS }});
 
       var big = document.createElement('img');
       big.src = img.currentSrc || img.src;
@@ -57,7 +57,7 @@
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'img-zoom-close';
-      btn.setAttribute('aria-label', 'Close');
+      btn.setAttribute('aria-label', {{ i18n "close" | jsonify | safeJS }});
       btn.innerHTML = '&times;';
 
       overlay.appendChild(big);

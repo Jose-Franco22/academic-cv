@@ -1,0 +1,20 @@
+# Navigation links for the Spanish site (English links are in menus.yaml).
+#   The weight parameter defines the order that the links will appear in.
+
+main:
+  - name: Bio
+    url: /
+    weight: 10
+  - name: Experiencia
+    url: experience/
+    weight: 20
+  - name: Proyectos
+    url: projects/
+    weight: 25
+  - name: Credenciales
+    url: credentials/
+    weight: 27
+  - name: Currículum
+    # `../` because the PDF exists only once, at the site root, not under /es/
+    url: ../uploads/resume.pdf
+    weight: 30

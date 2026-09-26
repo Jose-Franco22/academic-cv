@@ -2,7 +2,9 @@
 {{ $block := .wcBlock }}
 {{ $content := $block.content }}
 {{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
-{{ $skills := (hugo.Data.credentials | default dict).skills | default slice }}
+{{ $data := hugo.Data.credentials | default dict }}
+{{ with index hugo.Data site.Language.Lang }}{{ with .credentials }}{{ $data = merge $data . }}{{ end }}{{ end }}
+{{ $skills := $data.skills | default slice }}
 
 <div class="flex flex-col items-center max-w-4xl mx-auto gap-3 justify-center px-6 md:px-0">
   {{ with $content.title }}

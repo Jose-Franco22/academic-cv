@@ -156,7 +156,7 @@
           "degree" (index . "title") "institution" (index . "awarder")
           "start" "" "end" (index . "date") "summary" (index . "summary" | default "")
           "icon" "hero/check-badge" "logo" (printf "media/certifications/%v" (index . "badge"))
-          "button" (dict "url" ($link | default "") "text" "View certificate" "icon" "hero/arrow-top-right-on-square")) }}
+          "button" (dict "url" ($link | default "") "text" (i18n "see_certificate") "icon" "hero/arrow-top-right-on-square")) }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -281,7 +281,7 @@
             {{ $button_scheme := (urls.Parse $button_link).Scheme }}
             {{ if not $button_scheme }}
               {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
+                {{ $button_link = cond (ne (path.Ext $button_link) "") ($button_link | relURL) ($button_link | relLangURL) }}
               {{ end }}
               {{ if eq (path.Ext $button_link) ".pdf" }}{{ $button_target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
             {{ else if in (slice "http" "https") $button_scheme }}
@@ -413,7 +413,7 @@
             {{ $button_scheme := (urls.Parse $button_link).Scheme }}
             {{ if not $button_scheme }}
               {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
+                {{ $button_link = cond (ne (path.Ext $button_link) "") ($button_link | relURL) ($button_link | relLangURL) }}
               {{ end }}
               {{ if eq (path.Ext $button_link) ".pdf" }}{{ $button_target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
             {{ else if in (slice "http" "https") $button_scheme }}

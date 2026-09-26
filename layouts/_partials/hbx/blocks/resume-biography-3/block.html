@@ -402,7 +402,7 @@
             {{ $target := "" }}
             {{ if not $scheme }}
               {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
+                {{ $button_link = cond (ne (path.Ext $button_link) "") ($button_link | relURL) ($button_link | relLangURL) }}
               {{ end }}
               {{ if eq (path.Ext $button_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
             {{ else if in (slice "http" "https") $scheme }}
@@ -590,6 +590,6 @@
   <p class="absolute inset-x-0 bottom-0 sm:bottom-0 px-4 text-center text-sm text-gray-500 dark:text-gray-400">
     &copy; {{ now.Year }} {{ site.Params.hugoblox.identity.name | default site.Title }}
     <span aria-hidden="true" class="mx-2">&middot;</span>
-    Made with <a href="https://hugoblox.com" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-primary-600 dark:hover:text-primary-400">Hugo Blox</a>
+    {{ i18n "made_with" }} <a href="https://hugoblox.com" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-primary-600 dark:hover:text-primary-400">Hugo Blox</a>
   </p>
 </div>
